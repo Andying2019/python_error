@@ -1,0 +1,16 @@
+import pandas as pd
+import numpy as np
+df = pd.read_csv('D:\python_learning_document\tianchi_fresh_comp_train_user_0.csv',encoding = 'gb2312') 
+
+报错：SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \UXXXXXXXX escape
+
+原因：D:\python_learning_document\字符转义出错
+解决：
+一:更换为绝对路径的写法
+func1("C:\\Users\\renyc")
+
+二:显式声明字符串不用转义（加r）
+func1(r"C:\Users\renyc")
+
+三:使用Linux的路径/
+func1("C:/Users/renyc")
